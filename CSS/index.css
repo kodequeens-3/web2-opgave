@@ -27,6 +27,8 @@ span {
   color: var(--lightgrey);
 }
 
+/* Header */
+
 /* Announcement bar */
 
 .announcement-bar {
@@ -35,7 +37,7 @@ span {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
-  padding: 8px 0;
+  padding: 3px 0;
 }
 
 .announcement-content {
@@ -68,13 +70,11 @@ span {
   animation-play-state: paused;
 }
 
-/* Header */
-
 /* Navigation */
 
 .nav {
   background-color: var(--background-color);
-  padding: 1rem;
+  padding: 2rem;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -164,7 +164,7 @@ span {
 .hero-logo {
   position: absolute;
   top: 40%;
-  left: 30%;
+  left: 35%;
   transform: translate(-50%, -50%);
   z-index: 3;
   width: 15rem;
@@ -183,7 +183,7 @@ span {
 
 .hero {
   position: relative;
-  height: 60svh;
+  height: 65svh;
   overflow: hidden;
 }
 
@@ -247,7 +247,7 @@ span {
 /* Category Section */
 
 .category-section {
-  max-width: 1400px;
+  max-width: 1600px;
   padding: 2rem;
   margin-inline: auto;
   margin-top: 30px;
@@ -255,6 +255,9 @@ span {
 
 .category-section h2 {
   padding-left: 10px;
+  font-family: "mundial narrow variable", sans-serif;
+  font-size: 4rem;
+  font-variation-settings: "wght" 200;
 }
 
 .categories {
@@ -307,6 +310,32 @@ span {
   opacity: 1;
 }
 
+/* Info section */
+
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 20px;
+  margin-block: 50px;
+  margin-inline: auto;
+  padding: 2.5rem;
+  background-color: var(--lightgrey);
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-content p {
+  color: var(--black);
+}
+
+/* Footer */
+
 /* Desktop Styling */
 
 @media (min-width: 768px) {
@@ -337,12 +366,12 @@ span {
   .categories {
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (min-width: 1024px) {
   .hero-logo {
-    width: 25rem;
+    width: 32rem;
     transition: all 0.3s;
+    left: 36%;
+    top: 50%;
   }
 
   .hero-text {
@@ -351,5 +380,9 @@ span {
     bottom: 5%;
     right: 20%;
     transition: all 0.3s;
+  }
+
+  .hero {
+    height: 70svh;
   }
 }
