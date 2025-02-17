@@ -123,6 +123,7 @@ span {
   top: 0;
   left: -100%;
   width: 60%;
+  min-width: 400px;
   height: 100vh;
   background-color: var(--lightgrey);
   z-index: 1000;
@@ -152,6 +153,7 @@ span {
 
 .menu-links {
   list-style: none;
+  padding-left: 50px;
 }
 
 .menu-links a {
