@@ -159,6 +159,10 @@ span {
   border-bottom: 1px solid #eee;
 }
 
+.menu-content {
+  padding: 18px;
+}
+
 /* Footer */
 
 footer {
@@ -272,7 +276,7 @@ footer {
 
 @media (min-width: 768px) {
   .burger-menu {
-    display: none;
+    /* display: none; */
   }
 
   .nav-links {

@@ -115,11 +115,12 @@ span {
 }
 
 /* Mobile Menu */
+
 .mobile-menu {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 60%;
+  width: 50%;
   height: 100vh;
   background-color: var(--lightgrey);
   z-index: 1000;
@@ -361,10 +362,6 @@ span {
 /* Desktop Styling */
 
 @media (min-width: 768px) {
-  .burger-menu {
-    display: none;
-  }
-
   .nav-links {
     display: block;
   }
