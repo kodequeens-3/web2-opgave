@@ -29,6 +29,10 @@ span {
 
 /* Header */
 
+.header-logo {
+  max-width: 150px;
+}
+
 /* Announcement bar */
 
 .announcement-bar {
@@ -88,15 +92,14 @@ span {
 
 .nav-content {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   gap: 30px;
   align-items: center;
   margin: 0 auto;
 }
 
 .burger-menu {
-  position: absolute;
-  left: 3%;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -139,7 +142,8 @@ span {
 
 .close-menu {
   position: absolute;
-  left: 7%;
+  left: 40px;
+  top: 60px;
   background: none;
   border: none;
   font-size: 24px;
@@ -160,7 +164,32 @@ span {
 }
 
 .menu-content {
-  padding: 18px;
+  padding-top: 40px;
+  padding-left: 10px;
+}
+
+/* Info section */
+
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  gap: 60px;
+  margin-block: 50px;
+  margin-inline: auto;
+  padding: 2.5rem;
+  background-color: var(--lightgrey);
+}
+
+.info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-content p {
+  color: var(--black);
 }
 
 /* Footer */
