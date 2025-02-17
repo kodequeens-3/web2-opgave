@@ -173,7 +173,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 4rem;
+  padding: 3.5rem;
   padding-bottom: 1rem;
   min-height: 60svh;
   max-width: 1600px;
@@ -182,7 +182,8 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
 .footer-socials {
@@ -203,6 +204,14 @@ footer {
   color: var(--lightgrey);
   margin-bottom: 20px;
   font-weight: 200;
+  font-size: 1.8rem;
+}
+
+.footer-faq a,
+.footer-brand a,
+.footer-categories a {
+  font-size: 1.4rem;
+  font-weight: 100;
 }
 
 .footer-flex {
@@ -211,6 +220,12 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .form-title h2 {
@@ -249,8 +264,7 @@ footer {
 .copyright {
   color: var(--lightgrey);
   font-size: 14px;
-  padding: 10px;
-  width: 1500px;
+  padding: 20px;
   margin-inline: auto;
 }
 
@@ -275,5 +289,10 @@ footer {
 
   .footer-sections {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
   }
 }

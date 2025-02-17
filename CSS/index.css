@@ -290,7 +290,7 @@ span {
   color: var(--lightgrey);
   font-size: 2.5rem;
   font-weight: bold;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease;
   z-index: 3;
 }
@@ -312,6 +312,25 @@ span {
 }
 
 .category:hover .text {
+  opacity: 1;
+}
+
+.show-all {
+  background-color: var(--black);
+  color: var(--lightgrey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  margin-inline: 10px;
+}
+
+.show-all-text {
+  position: static;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
   opacity: 1;
 }
 
@@ -339,101 +358,6 @@ span {
   color: var(--black);
 }
 
-/* Footer */
-
-footer {
-  margin-top: 100px;
-}
-
-.footer-section {
-  background-color: var(--red);
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 4rem;
-  padding-bottom: 1rem;
-  min-height: 60svh;
-  max-width: 1600px;
-  margin-inline: auto;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.footer-socials {
-  grid-column: 1/3;
-}
-
-.footer-faq,
-.footer-brand,
-.footer-categories {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-socials h2,
-.footer-faq h2,
-.footer-brand h2,
-.footer-categories h2 {
-  color: var(--lightgrey);
-  margin-bottom: 20px;
-  font-weight: 200;
-}
-
-.footer-flex {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.form-title h2 {
-  font-size: 2rem;
-}
-
-.footer-logo img {
-  width: 35svw;
-}
-
-.form {
-  display: flex;
-  flex-direction: row;
-  padding: 5px;
-  gap: 15px;
-}
-
-.form input {
-  color: var(--black);
-  padding: 10px;
-  font-size: 16px;
-  font-family: "mundial-narrow-variable", sans-serif;
-  transition: transform 0.4s;
-  width: 30svw;
-}
-
-.form input:focus {
-  outline: none;
-  transform: scale(1.04);
-}
-
-.subscribe {
-  background: 0;
-}
-
-.copyright {
-  color: var(--lightgrey);
-  font-size: 14px;
-  padding: 10px;
-  width: 1500px;
-  margin-inline: auto;
-}
-
 /* Desktop Styling */
 
 @media (min-width: 768px) {
@@ -451,10 +375,6 @@ footer {
 
   .info-section {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .footer-sections {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .categories {
@@ -482,5 +402,13 @@ footer {
 
   .hero {
     height: 70svh;
+  }
+
+  .category .text {
+    opacity: 0;
+  }
+
+  .show-all {
+    grid-column: span 2;
   }
 }
