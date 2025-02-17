@@ -1,7 +1,6 @@
 img {
   display: block;
   width: auto;
-  height: 85%;
 }
 
 h2 {
@@ -12,7 +11,7 @@ h3 {
   font-family: "mundial", sans-serif;
   font-weight: 400;
   color: rgb(112, 112, 112);
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 p {
@@ -20,19 +19,42 @@ p {
   padding-top: 1rem;
 }
 
+html {
+  background-color: #fffef2;
+}
+
 /* .scale {
   width: 50%;
   justify-self: center;
 } */
 
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  position: relative;
+}
+
+.image_container img {
+  max-height: 70%;
+  max-width: 100%;
+}
+
 .image_container {
   display: grid;
-  background-color: var(--lightgrey);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.image_box {
+  background-color: var(--grey);
+  width: 100%;
   padding-top: 3rem;
 }
 
 .image_box div {
-  margin-bottom: -277px;
+  margin-bottom: -180px;
 }
 
 .image_box div:last-child {
@@ -40,41 +62,94 @@ p {
 }
 
 .text_box {
-  background-color: var(--background);
+  background-color: var(--lightgrey);
   position: sticky;
-  bottom: 0%;
+  bottom: 0;
+  z-index: 10;
+  max-width: 100%;
+  min-height: auto;
+}
+
+.text_box p {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.text_box h1 {
+  font-size: 1.6rem;
+}
+
+.text_box h3 {
+  font-size: 1rem;
 }
 
 .margin {
-  margin-bottom: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin: 1rem 2rem 2rem;
 }
 
 .cart_button {
   background-color: var(--black);
   color: var(--background);
   width: 100%;
-  height: 3rem;
-  font-size: 1.5rem;
+  margin-top: 30px;
+  padding: 0.8rem;
+  font-size: 0.8rem;
   letter-spacing: 4px;
   cursor: pointer;
 }
 
 @media (min-width: 768px) {
   .grid_1-1 {
-    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
+  .image_box {
+    grid-row: auto;
+    grid-column: 1;
+  }
+
   .text_box {
-    max-width: 600px;
-    justify-content: center;
     position: sticky;
-    top: 0%;
+    top: 0;
+    bottom: auto;
+    padding-block: 2rem;
+    grid-row: auto;
+    grid-column: 2;
+  }
+
+  .text_box {
+    background-color: var(--lightgrey);
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .text_box p {
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+  }
+
+  .text_box h1 {
+    font-size: 2.5rem;
+  }
+
+  .text_box h3 {
+    font-size: 1.3rem;
+  }
+
+  .cart_button {
+    margin-top: 50px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    cursor: pointer;
   }
 
   .margin {
+    position: sticky;
+    top: 20px;
     max-width: 72%;
     margin-inline: auto;
   }
