@@ -20,10 +20,198 @@
 
 <body>
     <header>
+        <!-- Announcement bar -->
+        <div class="announcement-bar">
+            <div class="announcement-content">
+                <span class="announcement-text"></span>
+                <span class="announcement-spacer">○</span>
+                <span class="announcement-text">Get 10% off your first order</span>
+                <span class="announcement-spacer">○</span>
+                <span class="announcement-text">Get 10% off your first order</span>
+                <span class="announcement-spacer">○</span>
+                <span class="announcement-text">Get 10% off your first order</span>
+                <span class="announcement-spacer">○</span>
+                <span class="announcement-text">Get 10% off your first order</span>
+                <span class="announcement-spacer">○</span>
+            </div>
+        </div>
 
+        <!-- Navigation -->
+
+        <nav class="nav">
+            <div class="nav-content">
+                <button class="burger-menu" aria-label="Menu">
+                    <span></span>
+
+                    <span></span>
+                </button>
+                <img class="header-logo" src="ASSETS/seren_logo.png" alt="">
+                <a href="#" class="cart-icon">
+                    <svg width="20" height="15" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
+                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </a>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu">
+            <div class="menu-header">
+                <button class="close-menu" aria-label="Close menu">✕</button>
+            </div>
+            <div class="menu-content">
+                <ul class="menu-links">
+                    <li><a href="#womens">Women's Wear</a></li>
+                    <li><a href="#mens">Men's Wear</a></li>
+                    <li><a href="#fragrance">Fragrance</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Fragrances</h1>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <video autoplay muted loop playsinline>
+                    <source src="ASSETS/video/herovideo_stor.mp4" type="video/mp4">Your browser does not support the
+                    video tag.
+                </video>
+            </div>
+        </div>
+
+        <!-- Product section -->
+
+        <div class="categoryFilter">
+            <label for="productfilter" class="product-label">Filter</label>
+            <select id="productfilter" class="gender-select">
+                <option data-gender="All">All</option>
+                <option data-gender="Women">Womens</option>
+                <option data-gender="Men">Mens</option>
+                <option data-gender="Unisex">Unisex</option>
+            </select>
+        </div>
+
+        <section class="product-section">
+            <div class="grid_1-1-1">
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
 
     </main>
 
