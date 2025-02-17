@@ -15,6 +15,11 @@ html {
   background: #fffef2;
 }
 
+img {
+  display: block;
+  width: auto;
+}
+
 /* Styling variabler */
 
 :root {
