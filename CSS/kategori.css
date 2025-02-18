@@ -43,7 +43,7 @@
 .categoryFilter {
   max-width: 1600px;
   margin-inline: auto;
-  margin-top: 50px;
+  margin-block: 40px;
   padding-inline: 1rem;
 }
 
@@ -76,11 +76,12 @@
 .product-section {
   background-color: var(--lightgrey);
   margin-inline: auto;
+  padding: 1rem;
 }
 
 .grid_1-1-1 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   width: 100%;
   margin-top: 10px;
@@ -92,6 +93,12 @@
   grid-template-columns: 1fr;
   width: 100%;
   background-color: var(--grey);
+  transition: all 0.3s;
+}
+
+.product-card:hover {
+  scale: 1.02;
+  transition: all 0.3s;
 }
 
 .product-image {
@@ -103,24 +110,40 @@
 .product-image img {
   object-fit: contain;
   max-width: 30svw;
+  min-height: 200px;
 }
 
 .product-description {
   display: grid;
-  gap: 10px;
+  gap: 5px;
   background-color: var(--lightgrey);
   color: var(--black);
-  padding: 1rem;
+  padding: 0.5rem;
   width: 100%;
   min-width: 100%;
   text-align: center;
+}
+
+.product-description h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .product-description p {
   color: var(--black);
 }
 
+.product-card:hover .product-description {
+  background-color: var(--grey);
+  transition: all 0.3s;
+}
+
 .addtocart {
+  background-color: var(--lightgrey);
+}
+
+.cart_button {
+  position: relative;
   background-color: var(--black);
   padding: 1rem;
   width: 100%;
@@ -128,9 +151,42 @@
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  opacity: 1;
 }
 
 .addtocart button {
   background-color: var(--black);
   color: var(--lightgrey);
+}
+
+/* Desktop view */
+
+@media (min-width: 768px) {
+  .grid_1-1-1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-description {
+    gap: 10px;
+    padding: 1rem;
+  }
+
+  .product-description h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .product-image img {
+    object-fit: contain;
+    max-width: 30svw;
+  }
+
+  .cart_button {
+    opacity: 0;
+  }
+
+  .product-card:hover .cart_button {
+    opacity: 1;
+    transition: all 0.3s;
+  }
 }
