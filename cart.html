@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/ach4lxr.css">
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/mutual.css">
-    <link rel="stylesheet" href="CSS/productpage.css">
+    <link rel="stylesheet" href="CSS/cart.css">
 </head>
 
 <body>
@@ -37,16 +37,16 @@
         </div>
 
         <!-- Navigation -->
-
         <nav class="nav">
             <div class="nav-content">
                 <button class="burger-menu" aria-label="Menu">
                     <span></span>
-
                     <span></span>
                 </button>
-                <img class="header-logo" src="ASSETS/seren_logo.png" alt="">
-                <a href="cart.html" class="cart-icon">
+                <div class="nav-links">
+                    <a href="kategori.html" class="nav-link">Categories</a>
+                </div>
+                <a href="#kommeriktilatske" class="cart-icon">
                     <svg width="20" height="15" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
@@ -70,96 +70,22 @@
             </div>
             <div class="menu-content">
                 <ul class="menu-links">
-                    <li><a href="#womens">Women's Wear</a></li>
-                    <li><a href="#mens">Men's Wear</a></li>
-                    <li><a href="#fragrance">Fragrance</a></li>
-                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="kategori.html">Women's Wear</a></li>
+                    <li><a href="kategori.html">Men's Wear</a></li>
+                    <li><a href="kategori.html">Fragrance</a></li>
+                    <li><a href="kategori.html">Accessories</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
     <main>
-
-        <!-- Breadcrumbs -->
-
-        <div class="breadcrumbs">
-            <a class="breadcrumb-item" href="index.html">Home</a>
-            <span>></span>
-            <a class="breadcrumb-item" href="kategori.html">Fragrances</a>
-            <span>></span>
-            <a class="breadcrumb-item active" href="kategori.html">Fragrances</a>
-        </div>
-
-        <!-- Product section -->
-
-        <section class="grid_1-1">
-            <div class="image_box">
-                <div class="image_container">
-                    <img class="scale" src="ASSETS/product-billeder/image1.png" alt="Product name">
+        <section class="cart-section">
+            <div class="cart">
+                <div class="cart-header">
+                    <h1>Shopping Cart</h1>
+                    <span class="cart-items">You don't have any items in your cart.</span>
                 </div>
-                <div class="image_container">
-                    <img src="ASSETS/product-billeder/image3.png" alt="Product name">
-                </div>
-                <div class="image_container">
-                    <img class="scale" src="ASSETS/product-billeder/image1.png" alt="Product name">
-                </div>
-            </div>
-            <div class="text_box">
-                <div class="margin">
-                    <h3>Brand</h3>
-                    <h1>Product name</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eligendi aperiam accusantium fuga
-                        at natus, nobis veritatis quod numquam officiis aspernatur harum doloribus! Harum, similique
-                        cum?</p>
-                    <h2>$ pris</h2>
-                    <button class="cart_button">Add to cart</button>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="info-section">
-            <div class="info-content">
-                <div class="info-icon">
-                    <svg width="40" height="40" viewBox="0 0 50 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M42.3195 15.3157C35.1048 8.93034 25.1179 8.8054 21.5957 8.99851V1.13621C21.5957 0.511279 21.0844 0 20.4595 0C20.1982 0 19.9368 0.090858 19.7323 0.261284L0.417334 16.1678C-0.071257 16.5654 -0.139428 17.2812 0.258305 17.7698C0.303787 17.8266 0.360561 17.8721 0.417334 17.9289L19.7323 33.8353C20.2209 34.2329 20.9367 34.1647 21.3343 33.6762C21.5047 33.4717 21.5956 33.2217 21.5956 32.9491V24.7459C25.2882 23.8938 40.2516 21.4964 47.8639 35.7554C48.057 36.1304 48.4434 36.3576 48.8638 36.3576C49.2273 36.3576 49.5796 36.1872 49.8068 35.8577C49.9431 35.6646 49.9999 35.426 49.9999 35.1874C49.9887 26.5183 47.4095 19.8376 42.3195 15.3157ZM27.7537 21.8487C23.3794 21.8487 20.2209 22.7463 20.1413 22.769C19.6527 22.9053 19.3233 23.3484 19.3233 23.8597V30.5404L2.92825 17.0426L19.3233 3.54487V10.2256C19.3233 10.8505 19.8345 11.3618 20.4595 11.3618C20.505 11.3618 20.5503 11.3618 20.5958 11.3504C20.7208 11.339 32.8665 9.97559 40.8084 17.0199C44.5578 20.3376 46.796 25.03 47.4891 30.9722C41.7287 23.4621 33.6391 21.8487 27.7537 21.8487Z"
-                            fill="black" />
-                    </svg>
-
-                </div>
-                <h2>Return</h2>
-                <p>30 days return policy</p>
-            </div>
-            <div class="info-content">
-                <div class="info-icon">
-                    <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M25 0C28.125 0 30.6562 3.42708 33.4271 4.60417C36.1979 5.78125 40.5312 5.13542 42.6354 7.36458C44.7396 9.59375 44.2083 13.6875 45.3958 16.5729C46.5833 19.4583 50 21.875 50 25C50 28.125 46.5729 30.6562 45.3958 33.4271C44.2188 36.1979 44.8646 40.5312 42.6354 42.6354C40.4062 44.7396 36.3125 44.2292 33.4271 45.3958C30.5417 46.5625 28.125 50 25 50C21.875 50 19.3438 46.5729 16.5729 45.3958C13.8021 44.2188 9.46875 44.8646 7.36458 42.6354C5.26042 40.4062 5.77083 36.3125 4.60417 33.4271C3.4375 30.5417 0 28.125 0 25C0 21.875 3.42708 19.3438 4.60417 16.5729C5.78125 13.8021 5.13542 9.46875 7.36458 7.36458C9.59375 5.26042 13.6875 5.77083 16.5729 4.60417C19.4583 3.4375 21.875 0 25 0ZM25 7.89583C21.6171 7.89583 18.3102 8.89898 15.4974 10.7784C12.6847 12.6578 10.4924 15.3291 9.19781 18.4545C7.90324 21.5799 7.56452 25.019 8.22449 28.3369C8.88445 31.6547 10.5135 34.7024 12.9055 37.0945C15.2976 39.4865 18.3453 41.1155 21.6631 41.7755C24.981 42.4355 28.4201 42.0968 31.5455 40.8022C34.6709 39.5076 37.3422 37.3153 39.2216 34.5026C41.101 31.6898 42.1042 28.3829 42.1042 25C42.0904 20.4679 40.284 16.1254 37.0793 12.9207C33.8746 9.71602 29.5321 7.90957 25 7.89583ZM32.9375 17.4271L34.6146 19.0104C34.7861 19.2367 34.8789 19.5129 34.8789 19.7969C34.8789 20.0808 34.7861 20.357 34.6146 20.5833L24.0417 32.3646C23.8326 32.6016 23.5741 32.7898 23.2843 32.9158C22.9944 33.0418 22.6805 33.1025 22.3646 33.0938C22.0502 33.092 21.7395 33.0265 21.4513 32.9011C21.163 32.7758 20.9032 32.5933 20.6875 32.3646L14.9688 26.6667C14.864 26.5769 14.7781 26.4672 14.7161 26.344C14.6541 26.2208 14.6171 26.0865 14.6075 25.9489C14.5978 25.8112 14.6155 25.6731 14.6596 25.5424C14.7038 25.4117 14.7734 25.2911 14.8646 25.1875L14.9688 25.0729L16.6667 23.5C16.8712 23.28 17.1538 23.1492 17.4538 23.1355C17.7539 23.1219 18.0472 23.2266 18.2708 23.4271L18.3438 23.5L22.3958 27.6667L31.3437 17.4583C31.5534 17.2473 31.8369 17.126 32.1343 17.1201C32.4317 17.1143 32.7198 17.2244 32.9375 17.4271Z"
-                            fill="black" />
-                    </svg>
-                </div>
-                <h2>Warranty</h2>
-                <p>5 year warranty</p>
-            </div>
-            <div class="info-content">
-                <div class="info-icon">
-                    <svg width="40" height="40" viewBox="0 0 45 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M20.1797 1.60127C21.6226 0.799581 23.3772 0.799581 24.8203 1.60124L42.7712 11.574C43.5296 11.9953 44 12.7947 44 13.6623V33.3343C44 35.0693 43.0593 36.6682 41.5425 37.5108L24.8203 46.8009C23.3772 47.6026 21.6226 47.6026 20.1797 46.8009L3.45747 37.5108C1.9407 36.6682 1 35.0693 1 33.3343V13.6623C1 12.7947 1.47035 11.9953 2.22875 11.574L20.1797 1.60127Z"
-                            stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M1 12.2568L22.5 24.2013M22.5 24.2013L44 12.2568M22.5 24.2013V46.8957" stroke="black"
-                            stroke-width="2" stroke-linejoin="round" />
-                        <path d="M11.75 18.2291L33.25 6.28467" stroke="black" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M8.16669 24.9851L15.3334 28.9791" stroke="black" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-
-                </div>
-                <h2>Shipping</h2>
-                <p>Ships in 1-2 business days</p>
             </div>
         </section>
     </main>
@@ -235,7 +161,7 @@
     </footer>
 
     <script src="JS/base.js"></script>
-    <script src="JS/productpage.js"></script>
+    <script src="JS/kategori.js"></script>
 </body>
 
 </html>
