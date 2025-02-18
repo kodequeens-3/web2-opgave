@@ -43,8 +43,9 @@
 .categoryFilter {
   max-width: 1600px;
   margin-inline: auto;
-  margin-block: 40px;
-  padding-inline: 1rem;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-inline: 20px;
 }
 
 .categoryFilter label {

@@ -23,10 +23,9 @@ html {
   background-color: #fffef2;
 }
 
-/* .scale {
-  width: 50%;
-  justify-self: center;
-} */
+.breadcrumbs {
+  margin-bottom: 20px;
+}
 
 .grid_1-1 {
   display: grid;
