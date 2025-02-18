@@ -95,6 +95,7 @@
   width: 100%;
   background-color: var(--grey);
   transition: all 0.3s;
+  position: relative;
 }
 
 .product-card:hover {
@@ -160,6 +161,47 @@
   color: var(--lightgrey);
 }
 
+/* rabat label */
+.discount {
+  position: absolute;
+  top: 12%;
+  left: 0%;
+  text-align: center;
+  background-color: var(--black);
+  width: 118px;
+  padding-top: 0.5rem;
+  color: var(--background);
+  font-weight: bold;
+  visibility: hidden;
+  padding-bottom: 0.5rem;
+  opacity: 70%;
+}
+
+.foerpris {
+  text-decoration: line-through;
+  color: grey;
+}
+
+/* sold out label */
+.sold_out {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  text-align: center;
+  background-color: var(--black);
+  width: 100%;
+  color: var(--background);
+  padding-top: 0.8rem;
+  visibility: hidden;
+  padding-bottom: 0.8rem;
+  opacity: 70%;
+}
+
+.sold_out_img {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
 /* Desktop view */
 
 @media (min-width: 768px) {
@@ -190,4 +232,26 @@
     opacity: 1;
     transition: all 0.3s;
   }
+}
+
+/* states til labels */
+
+.hide {
+  display: none;
+}
+
+.position {
+  position: relative;
+}
+
+.tilbudHidden {
+  visibility: hidden;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+.isSoldOut {
+  visibility: visible;
 }
