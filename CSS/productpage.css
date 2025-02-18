@@ -50,6 +50,7 @@ html {
   background-color: var(--grey);
   width: 100%;
   padding-top: 3rem;
+  position: relative;
 }
 
 .image_box div {
@@ -95,6 +96,49 @@ html {
   font-size: 0.8rem;
   letter-spacing: 4px;
   cursor: pointer;
+}
+
+/* rabat label */
+.discount {
+  position: absolute;
+  top: 3%;
+  right: 0%;
+  text-align: center;
+  background-color: var(--black);
+  width: 30%;
+  color: var(--background);
+  font-weight: bold;
+  visibility: hidden;
+  padding-bottom: 0.5rem;
+  opacity: 70%;
+}
+
+.foerpris {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.white {
+  color: var(--background);
+}
+
+/* sold out label */
+.sold_out {
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  text-align: center;
+  background-color: var(--black);
+  width: 30%;
+  color: var(--background);
+  visibility: hidden;
+  padding-bottom: 0.8rem;
+  opacity: 70%;
+}
+
+.sold_out_img {
+  opacity: 0.5;
+  filter: grayscale(100%);
 }
 
 @media (min-width: 768px) {
