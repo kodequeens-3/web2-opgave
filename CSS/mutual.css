@@ -117,6 +117,70 @@ span {
   transition: 0.3s;
 }
 
+/* Breadcrumbs */
+
+.breadcrumbs {
+  display: flex;
+  gap: 10px;
+  padding: 20px 0 0 20px;
+  max-width: 1600px;
+  margin-inline: auto;
+  font-size: 1rem;
+}
+
+.breadcrumb-item {
+  transition: background-color 0.4s;
+}
+
+.breadcrumb-item {
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  text-decoration: none;
+  transition: background-color 0.4s;
+  position: relative;
+}
+
+.breadcrumb-item::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1.3px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--red);
+  transition: width 0.3s ease-out, left 0.3s ease-out;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs-active {
+  color: var(--red);
+  transition: ease-in-out 0.4s;
+}
+
+.breadcrumb-item:hover::after,
+.breadcrumb-item.active::after {
+  width: 100%;
+  left: 0;
+}
+
+/* .breadcrumbs a:hover {
+  border-bottom: solid 1.4px var(--red);
+  transition: all 0.3s;
+} */
+
+.breadcrumbs-active {
+  border-bottom: solid 1.4px var(--red);
+}
+
+.breadcrumbs a {
+  color: var(--black);
+}
+
+.breadcrumbs span {
+  color: var(--red);
+}
+
 /* Mobile Menu */
 .mobile-menu {
   position: fixed;
