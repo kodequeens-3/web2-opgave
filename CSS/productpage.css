@@ -10,6 +10,13 @@ h2 {
 h3 {
   font-family: "mundial", sans-serif;
   font-weight: 400;
+  color: var(--black);
+  padding-top: 1rem;
+}
+
+h3 span {
+  font-family: "mundial", sans-serif;
+  font-weight: 400;
   color: rgb(112, 112, 112);
   padding-top: 1rem;
 }
@@ -121,6 +128,7 @@ html {
 
 .foerpris {
   text-decoration: line-through;
+  text-decoration-thickness: 2px;
   color: grey;
 }
 

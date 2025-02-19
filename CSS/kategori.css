@@ -180,7 +180,8 @@
 
 .foerpris {
   text-decoration: line-through;
-  color: grey;
+  text-decoration-thickness: 1.5px;
+  color: grey !important;
 }
 
 .pris span {
