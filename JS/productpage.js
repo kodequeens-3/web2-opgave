@@ -33,7 +33,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
 
                 <div class="position">
                 
-                <span class="discount ${data.discountPercentage && "isOnSale"}">${Math.round(data.discountPercentage)}%</span>
+                <span class="discount ${data.discountPercentage >= 0.5 && "isOnSale"}">${Math.round(data.discountPercentage)}%</span>
 
                 <span class="sold_out ${isSoldOut && "isSoldOut"}">SOLD OUT</span>
                 </div>
@@ -46,8 +46,8 @@ fetch(`https://dummyjson.com/products/${productId}`)
                     <h1>${data.title}</h1>
                     <p>${data.description}</p>
                     <div class="pris">
-                        <h3 class="${data.discountPercentage && "foerpris"}">$ ${data.price},-</h3>
-                        <h3 class="tilbudHidden ${data.discountPercentage && "isOnSale"}">Now $ <span>${Math.floor(data.price - (data.price * data.discountPercentage) / 100)}<span/>,-</h3>
+                        <h3 class="${data.discountPercentage >= 0.5 && "foerpris"}">$ ${data.price},-</h3>
+                        <h3 class="tilbudHidden ${data.discountPercentage >= 0.5 && "isOnSale"}">Now $ <span>${Math.floor(data.price - (data.price * data.discountPercentage) / 100)}<span/>,-</h3>
                     </div>
 
 
