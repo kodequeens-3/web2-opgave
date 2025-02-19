@@ -112,7 +112,8 @@
 .product-image img {
   object-fit: contain;
   max-width: 30svw;
-  min-height: 200px;
+  min-height: 350px;
+  max-height: 350px;
 }
 
 .product-description {
@@ -236,8 +237,9 @@
   }
 
   .product-description {
-    gap: 10px;
+    gap: 5px;
     padding: 1rem;
+    min-height: 250px;
   }
 
   .product-description h2 {
