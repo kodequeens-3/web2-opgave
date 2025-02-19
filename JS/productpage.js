@@ -4,6 +4,9 @@ let productId = new URLSearchParams(window.location.search).get("id");
 // Finder HTML-elementet med klassen 'productContainer' - hvor produktdataen skal indsættes
 let productContainer = document.querySelector("#productContainer");
 
+const breadcrumbActive = document.querySelector("#breadcrumbActive");
+const breadcrumbProduct = document.querySelector("#breadcrumbProduct");
+
 // Henter/fetcher data om produktet fra API'et
 fetch(`https://dummyjson.com/products/${productId}`)
   .then((response) => response.json())
@@ -13,6 +16,12 @@ fetch(`https://dummyjson.com/products/${productId}`)
   .then((data) => {
     // Efter dataen er konverteret til et JavaScript-objekt:
     // Indsætter den hentede data i HTML'en ved at opdatere indholdet (innerHTML) af 'productContainer'
+
+    // Opdaterer breadcrumbs med kategori og titel
+    breadcrumbActive.innerHTML = data.category;
+    breadcrumbActive.href = `kategori.html?category=${data.category}`;
+    breadcrumbProduct.innerHTML = data.title;
+    breadcrumbProduct.href = `productpage.html?id=${data.id}`;
 
     // Hvis produktet er udsolgt, skal der vises en 'sold out'-besked og billedet skal ændres
     const isSoldOut = data.stock === 0;
