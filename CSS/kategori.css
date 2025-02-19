@@ -206,6 +206,28 @@
   filter: grayscale(100%);
 }
 
+/* states til labels */
+
+.hide {
+  display: none;
+}
+
+.position {
+  position: relative;
+}
+
+.tilbudHidden {
+  visibility: hidden;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+.isSoldOut {
+  visibility: visible;
+}
+
 /* Desktop view */
 
 @media (min-width: 768px) {
@@ -236,26 +258,4 @@
     opacity: 1;
     transition: all 0.3s;
   }
-}
-
-/* states til labels */
-
-.hide {
-  display: none;
-}
-
-.position {
-  position: relative;
-}
-
-.tilbudHidden {
-  visibility: hidden;
-}
-
-.isOnSale {
-  visibility: visible;
-}
-
-.isSoldOut {
-  visibility: visible;
 }
