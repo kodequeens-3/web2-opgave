@@ -56,14 +56,16 @@ function showList(products) {
                             <p>${product.tags[0]}</p>
                             <p>${product.brand}</p>
                 <div class="pris">
-                    <p class="${product.discountPercentage && "foerpris"}">$ ${product.price},-</p>
-                    <p class="tilbudHidden ${product.discountPercentage && "isOnSale"}">Now $ <span>${Math.floor(product.price - (product.price * product.discountPercentage) / 100)}<span/>,-</p>
+                    <p class="${product.discountPercentage >= 0.5 && "foerpris"}">$ ${product.price},-</p>
+                    <p class="tilbudHidden ${product.discountPercentage >= 0.5 && "isOnSale"}">Now $ <span>${Math.floor(product.price - (product.price * product.discountPercentage) / 100)}<span/>,-</p>
                 </div>
                         </div>
                     </a>
-                <div class="discount ${product.discountPercentage && "isOnSale"}">
-                <p>${Math.round(product.discountPercentage)}%</p>
+
+                <div class="discount ${product.discountPercentage >= 0.5 && "isOnSale"}">
+                <p>${product.discountPercentage >= 0.5 ? Math.round(product.discountPercentage) + "%" : ""}</p>
                 </div>
+
                     <div class="addtocart">
                         <button class="cart_button">Add to cart</button>
                     </div>
