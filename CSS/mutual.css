@@ -128,11 +128,11 @@ span {
   font-size: 1rem;
 }
 
-.breadcrumb-item {
+.breadcrumb_item {
   transition: background-color 0.4s;
 }
 
-.breadcrumb-item {
+.breadcrumb_item {
   display: flex;
   justify-content: center;
   color: var(--white);
