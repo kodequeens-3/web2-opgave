@@ -46,6 +46,10 @@ html {
   align-items: center;
 }
 
+.position {
+  position: relative;
+}
+
 .image_box {
   background-color: var(--grey);
   width: 100%;
@@ -111,6 +115,7 @@ html {
   visibility: hidden;
   padding-bottom: 0.5rem;
   opacity: 70%;
+  padding-top: 0.5rem;
 }
 
 .foerpris {
@@ -132,13 +137,40 @@ html {
   width: 30%;
   color: var(--background);
   visibility: hidden;
-  padding-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
   opacity: 70%;
+  padding-top: 0.5rem;
 }
 
 .sold_out_img {
   opacity: 0.5;
   filter: grayscale(100%);
+}
+
+.margin span {
+  color: var(--black);
+}
+
+/* states til labels */
+
+.hide {
+  display: none;
+}
+
+.position {
+  position: relative;
+}
+
+.tilbudHidden {
+  visibility: hidden;
+}
+
+.isOnSale {
+  visibility: visible;
+}
+
+.isSoldOut {
+  visibility: visible;
 }
 
 @media (min-width: 768px) {

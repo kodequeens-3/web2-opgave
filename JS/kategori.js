@@ -44,7 +44,7 @@ function showList(products) {
     .map(
       (product) => `            
              <article class="product-card">
-                    <a href="productpage.html">
+                    <a href="productpage.html?id=${product.id}">
                         <div class="product-image">
                             <img class="${product.soldout && "sold_out_img"}" src="${product.images[0]}" alt="${product.title}">
                         </div>
