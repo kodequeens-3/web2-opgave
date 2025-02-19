@@ -23,8 +23,11 @@ html {
   background-color: #fffef2;
 }
 
+/* Breadcrumbs */
 .breadcrumbs {
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1000; /* Ensure breadcrumbs are on top */
 }
 
 .grid_1-1 {
@@ -34,28 +37,33 @@ html {
   position: relative;
 }
 
-.image_container img {
-  max-height: 70%;
-  max-width: 100%;
-}
-
+/* Image container */
 .image_container {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
   padding-top: 2rem;
+  position: relative;
+  z-index: 1; /* Ensure image container is below breadcrumbs */
+}
+
+.image_container img {
+  max-height: 70%;
+  max-width: 100%;
 }
 
 .position {
   position: relative;
 }
 
+/* Image box */
 .image_box {
   background-color: var(--grey);
   width: 100%;
   padding-top: 3rem;
   position: relative;
+  z-index: 1; /* Ensure image box is below breadcrumbs */
 }
 
 .image_box div {
