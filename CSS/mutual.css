@@ -142,7 +142,7 @@ span {
   position: relative;
 }
 
-.breadcrumb-item::after {
+.breadcrumb_item::after {
   content: "";
   position: absolute;
   width: 0;
@@ -154,13 +154,13 @@ span {
 }
 
 .breadcrumbs a:hover,
-.breadcrumbs-active {
+.breadcrumbs_active {
   color: var(--red);
   transition: ease-in-out 0.4s;
 }
 
-.breadcrumb-item:hover::after,
-.breadcrumb-item.active::after {
+.breadcrumb_item:hover::after,
+.breadcrumb_item.active::after {
   width: 100%;
   left: 0;
 }
@@ -371,10 +371,6 @@ footer {
 /* Desktop Styling */
 
 @media (min-width: 768px) {
-  .burger-menu {
-    /* display: none; */
-  }
-
   .nav-links {
     display: block;
   }
