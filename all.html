@@ -12,15 +12,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#C73F0B">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="ASSETS/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="ASSETS/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="ASSETS/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="ASSETS/favicon_io/site.webmanifest">
-
     <link rel="stylesheet" href="https://use.typekit.net/ach4lxr.css">
     <link rel="stylesheet" href="CSS/base.css">
     <link rel="stylesheet" href="CSS/mutual.css">
-    <link rel="stylesheet" href="CSS/productpage.css">
+    <link rel="stylesheet" href="CSS/kategori.css">
 </head>
 
 <body>
@@ -72,6 +67,7 @@
         </nav>
 
         <!-- Mobile Menu Overlay -->
+
         <div class="mobile-menu">
             <div class="menu-header">
                 <button class="close-menu" aria-label="Close menu">✕</button>
@@ -88,55 +84,159 @@
     </header>
 
     <main>
+        <!-- Hero Section -->
+
+        <div class="hero">
+            <div class="hero-text">
+                <h1 id="categoryHeading"></h1>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <video autoplay muted loop playsinline>
+                    <source src="ASSETS/video/herovideo_stor.mp4" type="video/mp4">Your browser does not support the
+                    video tag.
+                </video>
+            </div>
+        </div>
 
         <!-- Breadcrumbs -->
+
         <div class="breadcrumbs">
             <a class="breadcrumb_item" href="index.html">Home</a>
             <span>></span>
-            <a id="breadcrumbActive" class="breadcrumb_item" href="kategori.html"></a>
-            <span>></span>
-            <a id="breadcrumbProduct" class="breadcrumb_item active" href="kategori.html"></a>
+            <a id="breadcrumbActive" class="breadcrumb_item active" href="kategori.html"></a>
+        </div>
+
+        <!-- Filter -->
+
+        <div class="categoryFilter">
+            <label for="productfilter" class="product-label">Filter</label>
+            <select id="filterOptions" class="gender-select">
+                <option value="All">All</option>
+                <option value="OnSale">On Sale</option>
+                <option value="InStock">In Stock</option>
+            </select>
         </div>
 
         <!-- Product section -->
-        <section id="productContainer" class="grid_1-1">
-            <!-- <div class="image_box">
 
-                <div class="sold_out">
-                    <p class="white">Sold out</p>
-                </div>
-
-                <div class="discount">
-                    <p class="white"> %</p>
-                </div>
-
-                <div class="image_container">
-                    <img class="sold_out_img scale" src="ASSETS/product-billeder/image1.png" alt="Product name">
-                </div>
-                <div class="image_container">
-                    <img class="sold_out_img" src="ASSETS/product-billeder/image3.png" alt="Product name">
-                </div>
-                <div class="image_container">
-                    <img class="sold_out_img scale" src="ASSETS/product-billeder/image1.png" alt="Product name">
-                </div>
-            </div>
-            <div class="text_box">
-                <div class="margin">
-                    <h3>Brand</h3>
-                    <h1>Product name</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eligendi aperiam accusantium fuga
-                        at natus, nobis veritatis quod numquam officiis aspernatur harum doloribus! Harum, similique
-                        cum?</p>
-                    <div class="pris">
-                        <h3>$89.99</h3>
-                        <h3>Now: $</h3>
+        <section class="product-section">
+            <div class="category_list_container">
+                <!-- <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img class="sold_out_img" src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="sold_out">
+                            <p>Sold out</p>
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <div class="pris">
+                                <h3>$89.99</h3>
+                                <h3>Now: $</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="discount">
+                        <p> %</p>
                     </div>
-                    <button class="cart_button">Add to cart</button>
-                </div>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
 
-            </div> -->
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <a href="productpage.html">
+                        <div class="product-image">
+                            <img src="ASSETS/Kategori-billeder/dior.png" alt="">
+                        </div>
+                        <div class="product-description">
+                            <h2>Dior J'adore</h2>
+                            <p>Fragrance</p>
+                            <p>Dior</p>
+                            <h3>$89.99</h3>
+                        </div>
+                    </a>
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article> -->
+            </div>
         </section>
 
+        <!-- Info section -->
         <section class="info-section">
             <div class="info-content">
                 <div class="info-icon">
@@ -253,7 +353,7 @@
     </footer>
 
     <script src="JS/base.js"></script>
-    <script src="JS/productpage.js"></script>
+    <script src="JS/all.js"></script>
 </body>
 
 </html>
