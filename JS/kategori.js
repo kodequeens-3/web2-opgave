@@ -101,7 +101,7 @@ function showFiltered() {
   if (filter === "All") {
     filteredData = allData.products;
   } else if (filter === "OnSale") {
-    filteredData = allData.products.filter((product) => product.discountPercentage > 0);
+    filteredData = allData.products.filter((product) => product.discountPercentage >= 1);
   } else if (filter === "InStock") {
     filteredData = allData.products.filter((product) => product.stock > 0);
   }
