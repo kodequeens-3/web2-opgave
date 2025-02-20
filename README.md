@@ -78,23 +78,151 @@ Brug korte beskrivelser, som i eksemplerne herover
 
 Dette afsnit skal liste de endpoints fra API'et i har benyttet:
 
-- (fx. https://dummyjson.com/products)
-  Det betyder flere links med de forskellige parametre/limits vi ender med at bruge... kommer undervejs
+all.js
+
+- https://dummyjson.com/products/category/${category}
+
+kategori.js
+
+- https://dummyjson.com/products/categories
+- https://dummyjson.com/products/category/${myCategory}
+
+poductpage.js
+
+- https://dummyjson.com/products/${productId}
 
 # Dokumentation af Funktion
 
 Dette afsnit skal beskrive en funktion I selv har udviklet. Det kunne eksempelvis være en funktion der generere en listen over fx. produkter:
 
 - Beskrivelse: Hvad gør funktionen? Hvordan spiller den sammen med resten af koden?
-- Parametre: Hvilke input forventes (fx en værdi fra en dropdown eller URL'en)?
-- Returnerer: Beskriv, om funktionen returnerer en værdi eller blot manipulerer DOM’en.
-- Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes:
 
 ```javascript
-//funktionens kode:
-function voresFunktion(sprog) {
-  console.log(`${sprog} syntax highlighting`);
+const myCategory = new URLSearchParams(window.location.search).get("category");
+```
+
+Denne kode henter værdien af URL-parameteren category og gemmer den i constanten 'myCategory'
+
+```javascript
+let listContainer = document.querySelector(".category_list_container");
+```
+
+Her defineres hvilken container der bruges til at indsætte den dynamiske html.
+
+```javascript
+fetch(`https://dummyjson.com/products/category/${myCategory}`)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    allData = data;
+    showList(data.products);
+  });
+```
+
+Herefter fetcher vi den definerede kategori, ved brug af myCategory funktionen. Så afventer vi respons, hvorefter response.json omdanner den fetchede data til et JavaScript objekt.
+Til sidst bruger vi 'showList(data.products)' til at hente alle data om produkterne.
+
+```javascript
+function showList(products) {
+  console.log(products); // Logger alle produkter i konsollen, så man kan se den hentede data
+
+  const markup = products
+    .map(
+      (product) => `
+             <article class="product-card">
+```
+
+Efter vi har hentet data, sætter vi det ind i funktionen 'showList' og console.log'er for at se dataen i konsollen.
+Herefter opretter vi en konstant kaldet 'markup' hvor vi tildeler den de data vi har fra products.
+.map samler produkterne i et array. '(product) =>' Henter hvert produkt i arrayet, som vi til sidst sætter ind i html'en.
+
+```javascript
+ `</article>`
+    )
+    .join("");
+
+    listContainer.innerHTML = markup;
+```
+
+Herefter joiner vi de data vi har kaldt i en string, vi bruger anførselstegn i join, for ikke at have en seperater mellem elementerne i html'en.
+Herefter sætter vi den genererede html ind i DOM'en, ved hjælp af vores konstant listContainer.
+
+- Parametre: Hvilke input forventes (fx en værdi fra en dropdown eller URL'en)?
+
+```javascript
+const myCategory = new URLSearchParams(window.location.search).get("category");
+```
+
+Her defineres vores input, som er hardcodes på indexsiden.
+
+- Returnerer: Beskriv, om funktionen returnerer en værdi eller blot manipulerer DOM’en.
+  Vi returnerer en værdi hentet fra API'en som manipulerer dommen.
+
+- Eksempel på brug: Indsæt funktions-koden herunder(der hvor koden er i eksemplet) og vis, hvordan funktionen kaldes:
+
+  Funktionen kaldes her:
+
+  ```javascript
+    .then((data) => {
+    showList(data.products);
+  })
+  ```
+
+  Med argumentet '(data.products)', som indeholder en liste af produkter, der skal vises på siden.
+
+```javascript
+const myCategory = new URLSearchParams(window.location.search).get("category");
+
+let listContainer = document.querySelector(".category_list_container");
+
+fetch(`https://dummyjson.com/products/category/${myCategory}`)
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    allData = data;
+    showList(data.products);
+  })
+  .catch((error) => {
+    console.error("Error fetching products:", error);
+  });
+
+console.log("Category from URL:", myCategory);
+
+function showList(products) {
+  console.log(products);
+
+  const markup = products
+    .map(
+      (product) => `            
+             <article class="product-card">
+                    <a href="productpage.html?id=${product.id}">
+                        <div class="product-image">
+                            <img class="${product.soldout && "sold_out_img"}" src="${product.images[0]}" alt="${product.title}">
+                        </div>
+                <div class="sold_out ${product.soldout && "isSoldOut"}">
+                    <p>Sold out</p>
+                </div>
+                        <div class="product-description">
+                            <h2>${product.title}</h2>
+                            <p>${product.tags[0]}</p>
+                            <p>${product.brand}</p>
+                <div class="pris">
+                    <p class="${product.discountPercentage >= 0.5 && "foerpris"}">$ ${product.price},-</p>
+                    <p class="tilbudHidden ${product.discountPercentage >= 0.5 && "isOnSale"}">Now $ <span>${Math.floor(product.price - (product.price * product.discountPercentage) / 100)}<span/>,-</p>
+                </div>
+                        </div>
+                    </a>
+
+                <div class="discount ${product.discountPercentage >= 0.5 && "isOnSale"}">
+                <p>${product.discountPercentage >= 0.5 ? Math.round(product.discountPercentage) + "%" : ""}</p>
+                </div>
+
+                    <div class="addtocart">
+                        <button class="cart_button">Add to cart</button>
+                    </div>
+                </article>`
+    )
+    .join("");
+  listContainer.innerHTML = markup;
 }
-//hvordan funktionen kaldes:
-voresFunktion("JavaScript");
 ```
