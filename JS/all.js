@@ -1,30 +1,5 @@
-//const myCategory = new URLSearchParams(window.location.search).get("category");
-
 // Finder 'category_list_container' - her skal produktlisten indsættes
 let listContainer = document.querySelector(".category_list_container");
-
-const heroHeading = document.querySelector("#categoryHeading");
-const breadcrumbActive = document.querySelector("#breadcrumbActive");
-
-/*
-// Henter data om alle kategorier fra API'et
-fetch(`https://dummyjson.com/products/categories`)
-  .then((response) => response.json())
-  .then((categories) => {
-    console.log(categories); // Log the categories to see their structure
-    const category = categories.find((category) => category.slug === myCategory);
-    if (category) {
-      heroHeading.innerHTML = category.name;
-      breadcrumbActive.innerHTML = category.name;
-    } else {
-      console.error("Category not found");
-    }
-  })
-  .catch((error) => {
-    console.error("Error fetching categories:", error);
-  });
-
-  */
 
 let allProducts = [];
 
@@ -43,6 +18,7 @@ async function loadAllData() {
   await loadData("fragrances");
   await loadData("womens-jewellery");
   await loadData("mens-watches");
+  await loadData("sunglasses");
 
   console.log("allProducts", allProducts);
 
@@ -50,23 +26,6 @@ async function loadAllData() {
 }
 
 loadAllData();
-
-/*
-fetch(`https://dummyjson.com/products/category/${myCategory}`)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data); // Log the data to see its structure
-    allData = data; // Store the data in allData
-    showList(data.products); // Assuming the products are inside a 'products' property
-  })
-  .catch((error) => {
-    console.error("Error fetching products:", error);
-  });
-
-// Når dataen er konverteret, kaldes funktionen 'showList' med dataen som argument (dataen sendt til funktionen)
-
-console.log("Category from URL:", myCategory);
-*/
 
 // Funktion der viser listen af produkter
 function showList(products) {
